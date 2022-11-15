@@ -9,7 +9,7 @@
 int main(void)
 {
 	int tens, unit;
-	char comma, space;
+	int comma, space;
 
 	for (tens = 0; tens < 9; tens++)
 	{
@@ -19,7 +19,7 @@ int main(void)
 			putchar(space);
 			putchar(tens + ('0' - 0));
 			putchar(unit + ('0' - 0));
-			comma = ',', space = ' ';
+			comma = 44, space = 32;	/* ASCII: 44 - ',' | 32 - SPC */
 		}
 	}
 	putchar('\n');
