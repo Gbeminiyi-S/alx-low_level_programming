@@ -2,6 +2,9 @@
 
 /**
  * print_times_table - prints n times table, starting with 0
+ * @n: stop value
+ *
+ * Description: If n is greater than 15 or less than 0, print nothing
  */
 void print_times_table(int n)
 {
@@ -10,7 +13,7 @@ void print_times_table(int n)
 
 	if (n > 15 || n < 0)
 	{
-		return ;
+		return;
 	}
 
 	for (i = 0; i < n + 1; i++)
@@ -29,21 +32,15 @@ void print_times_table(int n)
 				{
 					_putchar(space);
 					if (product < 10)
-					{
 						_putchar(space);
-					}
 				}
 			}
 			if (product < 10)
-			{
 				_putchar(product + ('0' - 0));
-			}
 			else
 			{
 				if (product > 99)
-				{
 					_putchar((product / 100) + ('0' - 0));
-				}
 				_putchar((product / 10) % 10 + ('0' - 0));
 				_putchar((product % 10) + ('0' - 0));
 			}
