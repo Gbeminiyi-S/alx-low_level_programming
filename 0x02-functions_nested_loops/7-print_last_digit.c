@@ -4,16 +4,18 @@
  * print_last_digit - prints the last digit of a number
  * @num: integer
  *
- * Return: value of the last digit
+ * Return: the value of the last digit
  */
 int print_last_digit(int num)
 {
-	if (num < 0)
+	int modulus = num % 10;
+
+	if (modulus < 0)
 	{
-		num *= -1;
+		modulus *= -1;
 	}
 
-	_putchar((num % 10) + ('0' - 0));
+	_putchar(modulus + ('0' - 0));
 
-	return (num % 10);
+	return (modulus);
 }
