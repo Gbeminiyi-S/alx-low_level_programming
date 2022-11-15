@@ -16,7 +16,7 @@ void print_number(int n)
 
 	temp = n;
 
-	power = power_number(n);
+	power = power_number(temp);
 
 	while (power != 1)
 	{
@@ -31,7 +31,7 @@ void print_number(int n)
  *
  * Return: result
  */
-int power_number(int n)
+int power_number(unsigned int n)
 {
 	int power = 1;
 
