@@ -20,10 +20,13 @@ void times_table(void)
 			{
 				_putchar(comma);
 				_putchar(space);
+				if (product < 10)
+				{
+					_putchar(space);
+				}
 			}
 			if (product < 10)
 			{
-				_putchar(32);
 				_putchar(product + ('0' - 0));
 			}
 			else
