@@ -18,6 +18,6 @@ char *rot13(char *str);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void print_buffer(char *b, int size);
 void strUpdate(char *buffer, int size);
-int power_integer(int n);
+int power_integer(unsigned int n);
 
 #endif /* _MAIN_H_ */
