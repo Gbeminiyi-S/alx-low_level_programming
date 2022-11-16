@@ -8,16 +8,30 @@
  */
 int is_palindrome(char *s)
 {
-	int i, len = _strlen(s);
+	int len = _strlen(s);
 
-	for (i = 0; i < (len + 1) / 2; i++)
+	return (palindrome_check(s, len, 0));
+}
+
+/**
+ * palindrome_check - helper function to check if palindrome
+ * @s: pointer to string
+ * @len: string length
+ * @i: char index
+ *
+ * Return: 1 if palindrome, else, 0
+ */
+int palindrome_check(char *s, int len, int i)
+{
+	if (i >= (len + 1) / 2)
 	{
-		if (s[i] != s[len - i - 1])
-		{
-			return (0);
-		}
+		return (1);
 	}
-	return (1);
+	if (s[i] != s[len - i - 1])
+	{
+		return (0);
+	}
+	return (palindrome_check(s, len, i + 1));
 }
 
 /**
@@ -28,10 +42,7 @@ int is_palindrome(char *s)
  */
 int _strlen(char *s)
 {
-	int i;
-
-	for (i = 0; s[i]; i++)
-		;
-
-	return (i);
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen(s + 1));
 }
