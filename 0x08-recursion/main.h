@@ -18,5 +18,7 @@ char *test(char *s5, char *s6, char *t5, char *t6);
 char *wildcard(char *s3, char *s4);
 int _recursion_calc(int n, int num);
 int _recursion_check(int n, int num);
+int palindrome_check(char *s, int len, int i);
+int _strlen(char *s);
 
 #endif /* _MAIN_H_ */
