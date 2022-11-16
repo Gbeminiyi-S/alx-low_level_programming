@@ -23,5 +23,6 @@ int wildcmp(char *s1, char *s2);
 char *test(char *s5, char *s6, char *t5, char *t6);
 char *wildcard(char *s3, char *s4);
 int _recursion_calc(int n, int num);
+int _recursion_check(int n, int num);
 
 #endif /* _MAIN_H_ */
