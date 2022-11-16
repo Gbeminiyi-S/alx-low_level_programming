@@ -7,18 +7,19 @@
 void print_number(int n)
 {
 	int power;
+	unsigned int number = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		number *= -1;
 	}
 
-	power = power_integer(n);
+	power = power_integer(number);
 
 	while (power != 0)
 	{
-		_putchar((n / power) % 10 + ('0' - 0));
+		_putchar((number / power) % 10 + ('0' - 0));
 		power /= 10;
 	}
 }
@@ -29,7 +30,7 @@ void print_number(int n)
  *
  * Return: result
  */
-int power_integer(int n)
+int power_integer(unsigned int n)
 {
 	int multiplier = 1, power = 1;
 
