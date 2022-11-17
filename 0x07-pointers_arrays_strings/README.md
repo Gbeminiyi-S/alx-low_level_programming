@@ -34,8 +34,3 @@ An introductory project on:
 
 [101-crackme_password](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x07-pointers_arrays_strings/101-crackme_password) - a file that contains the password for the [crackme2](https://github.com/holbertonschool/0x06.c) executable.
 
-[102-magic.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x06-pointers_arrays_strings/102-magic.c) - add one line to this [code](https://github.com/holbertonschool/make_magic_happen/blob/master/magic.c), so that the program prints `a[2] = 98`, followed by a new line.
-
-[103-infinite_add.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x06-pointers_arrays_strings/103-infinite_add.c) - adds two numbers.
-
-[104-print_buffer](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x06-pointers_arrays_strings/104-print_buffer) - prints a buffer.
