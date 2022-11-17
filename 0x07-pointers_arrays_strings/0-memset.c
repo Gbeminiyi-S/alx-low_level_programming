@@ -5,7 +5,7 @@
  * @s: memory area
  * @b: constant byte
  * @n: byte limit of memory fill
- * 
+ *
  * Description: function fills the first n bytes of the memory area
  *			pointed to by s with the constant byte b
  *
