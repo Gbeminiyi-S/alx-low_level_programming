@@ -1,84 +1,38 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+char **strtow(char *);
 
 /**
- * strtow - splits a string into words
- * @str: pointer to string containing words
+ * print_tab - Prints an array of string
  *
- * Return: pointer to an array of string, else, NULL
+ * @tab: The array to print
  */
-char **strtow(char *str)
+void print_tab(char **tab)
 {
-	char **ptr = NULL;
-	int i, j, k, index = 0, size_w, size_c;
+	int i;
 
-	if (str == NULL || str[0] == '\0')
+	for (i = 0; tab[i] != NULL; ++i)
 	{
-		return (NULL);
+		printf("%s\n", tab[i]);
 	}
-	size_w = word_count(str);
-	ptr = malloc(sizeof(char *) * (size_w + 1)); /* +1 for NULL teminator */
-	if (!ptr)
-	{
-		return (NULL);
-	}
-	for (i = 0; i < size_w; i++)
-	{
-		k = 0;
-		size_c = char_count(str, &index);
-		ptr[i] = malloc(sizeof(char) * (size_c + 1));
-
-		for (j = index - size_c; j < index; j++, k++)
-		{
-			ptr[i][k] = str[j];
-		}
-		ptr[i][k] = '\0';
-	}
-	ptr[i] = NULL;
-
-	return (ptr);
 }
 
 /**
- * word_count - finds the number of words
- * @str: pointer to string containing words
+ * main - check the code .
  *
- * Return: number of words
+ * Return: Always 0.
  */
-int word_count(char *str)
+int main(void)
 {
-	int i, word = 0;
+	char **tab;
 
-	for (i = 0; str[i];)
+	tab = strtow("                ");
+	if (tab == NULL)
 	{
-		while (str[i] == ' ')
-			i++;
-		if (str[i])
-			word++;
-		while (str[i] && str[i] != ' ')
-			i++;
+		printf("Failed\n");
+		return (1);
 	}
-	return (word);
-}
-/**
- * char_count - finds the number of characters in word
- * @str: pointer to string containing words
- * @index: pointer to index
- *
- * Return: number of characters
- */
-int char_count(char *str, int *index)
-{
-	int i = *index, chars = 0;
-
-	while (str[i] == ' ')
-	{
-		i++;
-	}
-	while (str[i] && str[i] != ' ')
-	{
-		i++, chars++;
-	}
-	*index = i;
-
-	return (chars);
+	print_tab(tab);
+	return (0);
 }
