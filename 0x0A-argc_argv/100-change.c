@@ -14,10 +14,20 @@ int main(int ac, char **av)
 	int money, i = 0, number = 0;
 	int coin[] = {25, 10, 5, 2, 1};
 
-	if (ac == 2)
+	if (ac != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
 	{
 		money = atoi(av[1]);
 
+		if (money < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
 		while (money)
 		{
 			if (money >= coin[i])
@@ -25,7 +35,7 @@ int main(int ac, char **av)
 				number += money / coin[i];
 				if (money / coin[i] == 0)
 				{
-					return (0);
+					break;
 				}
 				else
 				{
@@ -35,12 +45,6 @@ int main(int ac, char **av)
 			i++;
 		}
 	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
 	printf("%d\n", number);
-
 	return (0);
 }
