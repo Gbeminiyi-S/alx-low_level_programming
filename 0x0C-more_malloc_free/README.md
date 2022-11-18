@@ -6,7 +6,7 @@ An introductory project on:
 ## Requirements
 - no global variable
 - files are compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-- the only C standard library functions allowed are malloc, free and exit. Any use of functions like printf, puts, calloc, realloc etc… is forbidden.
+- the only C standard library functions allowed are `malloc`, `free` and `exit`. Any use of functions like `printf`, `puts`, `calloc`, `realloc` etc… is forbidden.
 - allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
 ## File Descriptions
 ### Mandatory
