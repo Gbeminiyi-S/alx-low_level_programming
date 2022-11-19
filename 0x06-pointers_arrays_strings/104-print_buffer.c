@@ -46,13 +46,9 @@ void print_buffer(char *b, int size)
 			while (i < j && i < size)
 			{
 				if (isprint(b[i]))
-				{
 					printf("%c", b[i]);
-				}
 				else
-				{
 					printf(".");
-				}
 				i++;
 			}
 			printf("\n");
