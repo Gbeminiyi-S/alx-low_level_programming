@@ -2,6 +2,7 @@
 #define _MAIN_H_
 
 #include <stdio.h>
+#include <ctype.h>
 
 void reverse_array(int *a, int n);
 int _strcmp(char *s1, char *s2);
@@ -16,8 +17,11 @@ char *_strncpy(char *dest, char *src, int n);
 int strcount(char str[]);
 char *rot13(char *str);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+int _numlen(char *num);
+char *reverse_num(char *num, int len);
 void print_buffer(char *b, int size);
 void strUpdate(char *buffer, int size);
 int power_integer(unsigned int n);
 
 #endif /* _MAIN_H_ */
+
