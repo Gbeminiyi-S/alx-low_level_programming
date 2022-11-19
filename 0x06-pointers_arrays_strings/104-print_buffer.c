@@ -16,39 +16,46 @@ void print_buffer(char *b, int size)
 {
 	int i = 0, j, step = 0;
 
-	while (i < size)
+	if (size <= 0)
 	{
-		printf("%.8x: ", i);
-		j = i;
-		while (j < i + 10)
-		{
-			if (j < size)
-			{
-				printf("%.2x", b[j]);
-			}
-			else
-			{
-				printf("  ");
-			}
-			step++;
-			if (step % 2 == 0)
-			{
-				printf(" ");
-			}
-			j++;
-		}
-		while (i < j && i < size)
-		{
-			if (isprint(b[i]))
-			{
-				printf("%c", b[i]);
-			}
-			else
-			{
-				printf(".");
-			}
-			i++;
-		}
 		printf("\n");
+	}
+	else
+	{
+		while (i < size)
+		{
+			printf("%.8x: ", i);
+			j = i;
+			while (j < i + 10)
+			{
+				if (j < size)
+				{
+					printf("%.2x", b[j]);
+				}
+				else
+				{
+					printf("  ");
+				}
+				step++;
+				if (step % 2 == 0)
+				{
+					printf(" ");
+				}
+				j++;
+			}
+			while (i < j && i < size)
+			{
+				if (isprint(b[i]))
+				{
+					printf("%c", b[i]);
+				}
+				else
+				{
+					printf(".");
+				}
+				i++;
+			}
+			printf("\n");
+		}
 	}
 }
