@@ -14,7 +14,7 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(98);
 	}
-	if (!get_op_func(av[2]))
+	if (av[2][1] || !get_op_func(av[2]))
 	{
 		printf("Error\n");
 		exit(99);
