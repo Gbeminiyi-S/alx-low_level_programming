@@ -2,7 +2,7 @@
 
 /**
  * print_list -  prints all the elements of a list_t list
- * @h: pointer to liat
+ * @h: pointer to list
  *
  * Return: the number of nodes
  */
