@@ -1,4 +1,4 @@
-# 0x0E. C - Structures, typedef
+# 0x12. C - Singly linked lists
 An introductory project on:
 
 - When and why using linked lists vs arrays
