@@ -1,5 +1,5 @@
 #include "lists.h"
-/**
+/*
  * print_listint_safe - prints a listint_t linked list
  * @head: pointer to start of the list
  *
@@ -11,11 +11,17 @@ size_t print_listint_safe(const listint_t *head)
 	size_t isLoop = 0, i = 0;
 
 	if (!head)
-		exit(98);
-	/* Detecting if linked list is looped */
-	while (slow && fast && fast->next)
 	{
-		slow = slow->next, fast  = fast->next->next;
+		printf("0\n");
+		exit(98);
+	}
+	
+	/* Detecting if linked list is looped */
+	while(slow && fast && fast->next)
+	{
+		slow = slow->next;
+		fast  = fast->next->next;
+		printf("[%p] [%p]\n", (void *)slow, (void *)fast);
 		if (slow == fast)
 		{
 			slow = slow->next;
@@ -29,21 +35,24 @@ size_t print_listint_safe(const listint_t *head)
 		while (temp)
 		{
 			printf("[%p] %d\n", (void *)temp, temp->n);
-			temp = temp->next, i++;
+			temp = temp->next;
+			i++;
 		}
 		return (i);
 	}
+	/* if linked list is looped */
 	while (temp)
 	{
 		i++;
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		if (slow == temp)
 		{
-			printf("-> [%p] %d\n", (void *)slow->next, slow->next->n);
 			return (i);
 		}
 		else
+		{
 			temp = temp->next;
+		}
 	}
 	exit(98);
 }
