@@ -19,7 +19,6 @@ size_t print_listint_safe(const listint_t *head)
 		if (slow == fast)
 		{
 			slow = slow->next;
-			printf("~%d %d\n", slow->n, fast->n);
 			isLoop = 1;
 			break;
 		}
