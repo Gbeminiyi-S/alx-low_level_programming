@@ -12,7 +12,6 @@ size_t print_listint_safe(const listint_t *head)
 
 	if (!head)
 		exit(98);
-
 	/* Detecting if linked list is looped */
 	while (slow && fast && fast->next)
 	{
@@ -21,7 +20,8 @@ size_t print_listint_safe(const listint_t *head)
 		if (slow == fast)
 		{
 			slow = slow->next;
-			isLoop = 1, break;
+			isLoop = 1;
+			break;
 		}
 	}
 	/* if linked list is not looped */
