@@ -15,11 +15,11 @@ size_t print_listint_safe(const listint_t *head)
 	/* Detecting if linked list is looped */
 	while (slow && fast && fast->next)
 	{
-		slow = slow->next;
-		fast  = fast->next->next;
+		slow = slow->next, fast  = fast->next->next;
 		if (slow == fast)
 		{
 			slow = slow->next;
+			printf("~%d %d\n", slow->n, fast->n);
 			isLoop = 1;
 			break;
 		}
@@ -40,7 +40,7 @@ size_t print_listint_safe(const listint_t *head)
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		if (slow == temp)
 		{
-			printf("-> [%p] %d\n", (void *)temp->next, temp->next->n);
+			printf("-> [%p] %d\n", (void *)slow->next, slow->next->n);
 			return (i);
 		}
 		else
