@@ -47,4 +47,5 @@ size_t print_listint_safe(const listint_t *head)
 		else
 			temp = temp->next;
 	}
+	exit(98);
 }
