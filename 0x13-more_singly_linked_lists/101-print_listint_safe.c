@@ -34,9 +34,8 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		return (i);
 	}
-	/* if linked list is looped */
 	while (temp)
-	{
+	{	/* if linked list is looped */
 		i++;
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		if (slow == temp)
