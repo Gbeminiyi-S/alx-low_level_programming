@@ -16,5 +16,6 @@ int _recursion_check(int n, int num);
 int is_palindrome(char *s);
 int palindrome_check(char *s, int len, int i);
 int _strlen(char *s);
+int wildcmp(char *s1, char *s2);
 
 #endif /* _MAIN_H_ */
