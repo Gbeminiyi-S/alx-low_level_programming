@@ -5,7 +5,7 @@
  * @head: double pointer to list's head
  * @n: new node's data
  *
- * Return: the number of elements
+ * Return: the number of elements, else, NULL
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -18,17 +18,16 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	temp->prev = NULL;
 	temp->n = n;
+	temp->next = *head;
 
 	if (!(*head))
 	{
 		*head = temp;
-		temp->next = NULL;
 	}
 	else
 	{
-		temp->next = *head;
 		*head = temp;
 	}
 
-	return (*head);
+	return (temp);
 }
