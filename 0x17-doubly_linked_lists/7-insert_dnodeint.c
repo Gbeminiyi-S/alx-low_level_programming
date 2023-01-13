@@ -13,8 +13,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *temp = *h;
 	dlistint_t *new_node = NULL;
 
-	if (idx == 0)
-		return add_dnodeint(h, n);
+	if (idx == 0) /* for insert at beg. of list*/
+		return (add_dnodeint(h, n));
 
 	while (idx != 0 && temp)
 	{
@@ -22,10 +22,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		idx--;
 	}
 
-	if (!temp)
-		 return add_dnodeint_end(h, n);
+	if (!temp && !idx) /* for insert at end of list */
+		return (add_dnodeint_end(h, n));
 
-	if (idx)
+	if (idx) /* if index is out of range */
 		return (NULL);
 
 	new_node = malloc(sizeof(dlistint_t));
