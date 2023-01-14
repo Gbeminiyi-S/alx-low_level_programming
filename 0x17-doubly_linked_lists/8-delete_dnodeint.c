@@ -18,7 +18,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (!index)
 		{
 			if ((*head)->next)
-			{	
+			{
 				*head = (*head)->next;
 				(*head)->prev = NULL;
 				free(ptr);
@@ -40,16 +40,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (!(ptr->next)) /*if last element*/
 		{
 			ptr->prev->next = NULL;
-			free(ptr);
-			return (1);
 		}
 		else
 		{
 			ptr->prev->next = ptr->next;
 			ptr->next->prev = ptr->prev;
-			free(ptr);
-			return (1);
 		}
+		free(ptr);
+		return (1);
 	}
 	return (-1);
 }
