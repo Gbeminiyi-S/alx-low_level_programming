@@ -25,7 +25,7 @@ listint_t *find_listint_loop(listint_t *head)
 			break;
 		}
 	}
-	if (not met)
+	if (!met)
 		return (NULL);
 	tortoise = head;
 	while (tortoise != hare)
