@@ -8,8 +8,8 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listine_t *hare, *tortoise;
-	bool met = False;
+	listint_t *hare, *tortoise;
+	int met = 0;
 
 	if (!head)
 		return (NULL);
@@ -21,7 +21,7 @@ listint_t *find_listint_loop(listint_t *head)
 		hare = hare->next->next;
 		if (tortoise == hare)
 		{
-			met = True;
+			met = 1;
 			break;
 		}
 	}
