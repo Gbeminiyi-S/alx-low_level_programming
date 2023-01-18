@@ -33,8 +33,10 @@ size_t free_listint_safe(listint_t **h)
 			tortoise = tortoise->next;
 			hare = hare->next;
 		}
-		tortoise->next = NULL;
-		nodes = 1;
+		if (*h != tortoise)
+			hare->next = NULL;
+		else
+			hare->next->next = NULL;
 	}
 	while (*h)
 	{
