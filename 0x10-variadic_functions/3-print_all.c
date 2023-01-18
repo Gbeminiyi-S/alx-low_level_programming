@@ -29,6 +29,7 @@ void print_all(const char * const format, ...)
 {
 	va_list list;
 	int i = 0, j;
+	char *separator = "";
 	prt format_funcs[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -41,15 +42,16 @@ void print_all(const char * const format, ...)
 	{
 		for (j = 0; j < 4; j++)
 		{
-			if (format[i] == format_funcs[j].symbol)
+			if ((format[i] == format_funcs[j].symbol))
 			{
+				printf("%s", separator);
 				format_funcs[j].print(list);
-				if (format[i + 1])
-					printf(", ");
+				separator = ", ";
 			}
 		}
 		i++;
 	}
+
 	printf("\n");
 	va_end(list);
 }
