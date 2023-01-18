@@ -40,18 +40,20 @@ void print_all(const char * const format, ...)
 	va_start(list, format);
 	while (format[i])
 	{
-		for (j = 0; j < 4; j++)
+		j = 0;
+		while (j < 4)
 		{
 			if ((format[i] == format_funcs[j].symbol))
 			{
 				printf("%s", separator);
 				format_funcs[j].print(list);
 				separator = ", ";
+				break;
 			}
+			j++;
 		}
 		i++;
 	}
-
 	printf("\n");
 	va_end(list);
 }
