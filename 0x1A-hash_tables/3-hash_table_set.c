@@ -23,8 +23,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	value_copy = strdup(value);
 	if (!value_copy)
 		return (0);
+
 	/* Get the key's index from the key_index function*/
 	index = key_index((const unsigned char *)key, ht->size);
+
 	/* where the key already exists */
 	if (ht->array[index] && *(ht->array[index]->key) == *key)
 	{
@@ -46,12 +48,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->next = NULL;
 
 	/* adding the new node at the beginning of array */
-	if (!ht->array[index])
-		ht->array[index] = new_node;
-	else
+	if (ht->array[index])
 	{
 		new_node->next = ht->array[index];
-		ht->array[index] = new_node;
 	}
+	ht->array[index] = new_node;
 	return (1);
 }
