@@ -46,10 +46,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->next = NULL;
 
 	/* adding the new node at the beginning of array */
-	if (ht->array[index])
-	{
-		new_node->next = ht->array[index];
-	}
 	ht->array[index] = new_node;
 	return (1);
 }
