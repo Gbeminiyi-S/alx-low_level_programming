@@ -1,14 +1,13 @@
 # 0x13. C - More singly linked lists
 An introductory project on:
-
 - How to use linked lists
 ## Requirements
 - no global variable
 - Files are compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 - The only C standard library functions allowed are `printf`, `malloc`, `free` and `exit`
-- allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
+- Allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
 ## File Descriptions
-## Mandatory
+### Mandatory
 [0-print_listint.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/0-print_listint.c) - prints all the elements of a listint_t list
 
 [1-listint_len.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/blob/main/0x13-more_singly_linked_lists/1-listint_len.c) - returns the number of elements in a linked listint_t list
