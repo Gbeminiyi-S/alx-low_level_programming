@@ -10,7 +10,7 @@ An introductory project on:
 - Files are compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 - Allowed to use the C standard library
 ## File Descriptions
-## Mandatory
+### Mandatory
 [0-hash_table_create.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/0-hash_table_create.c) -  creates a hash table
 
 [1-djb2.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/1-djb2.c) - a hash function implementing the djb2 algorithm
@@ -27,7 +27,7 @@ An introductory project on:
   
 [6-hash_table_delete.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/6-hash_table_delete.c) - a function that deletes a hash table
 
-## Advanced
+### Advanced
 [100-sorted_hash_table.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/100-sorted_hash_table.c) - Rewrite the previous functions using these data structures:
 - `shash_table_t *shash_table_create(unsigned long int size);`
 - `int shash_table_set(shash_table_t *ht, const char *key, const char *value);`
