@@ -11,24 +11,24 @@ An introductory project on:
 - Allowed to use the C standard library
 ## File Descriptions
 ### Mandatory
-[0-hash_table_create.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/0-hash_table_create.c) -  creates a hash table
+[0-hash_table_create.c](./0-hash_table_create.c) -  creates a hash table
 
-[1-djb2.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/1-djb2.c) - a hash function implementing the djb2 algorithm
+[1-djb2.c](./1-djb2.c) - a hash function implementing the djb2 algorithm
 
-[2-key_index.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/2-key_index.c) - a function that gives you the index of a key
+[2-key_index.c](./2-key_index.c) - a function that gives you the index of a key
 
-[3-hash_table_set.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/3-hash_table_set.c) - a function that adds an element to the hash table
+[3-hash_table_set.c](./3-hash_table_set.c) - a function that adds an element to the hash table
 
-[4-hash_table_get.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/4-hash_table_get.c) - a function that retrieves a value associated with a key
+[4-hash_table_get.c](./4-hash_table_get.c) - a function that retrieves a value associated with a key
 
-[5-hash_table_print.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/5-hash_table_print.c) - a function that prints a hash table
+[5-hash_table_print.c](./5-hash_table_print.c) - a function that prints a hash table
 - Print the key/value in the order that they appear in the array of hash table
   -  Order: array, list
   
-[6-hash_table_delete.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/6-hash_table_delete.c) - a function that deletes a hash table
+[6-hash_table_delete.c](./6-hash_table_delete.c) - a function that deletes a hash table
 
 ### Advanced
-[100-sorted_hash_table.c](https://github.com/Gbeminiyi-S/alx-low_level_programming/tree/main/0x1A-hash_tables/100-sorted_hash_table.c) - Rewrite the previous functions using these data structures:
+[100-sorted_hash_table.c](./100-sorted_hash_table.c) - Rewrite the previous functions using these data structures:
 - `shash_table_t *shash_table_create(unsigned long int size);`
 - `int shash_table_set(shash_table_t *ht, const char *key, const char *value);`
     - The key/value pair should be inserted in the sorted list at the right place
