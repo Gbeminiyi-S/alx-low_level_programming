@@ -9,14 +9,16 @@ An introductory project on:
 - Files are compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 
 # File Descriptions
-[0-whatsmyname.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x0A-argc_argv/0-whatsmyname.c) - a program that prints its name, followed by a new line.
+## Mandatory
+[0-whatsmyname.c](./0-whatsmyname.c) - a program that prints its name, followed by a new line.
 
-[1-args.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x0A-argc_argv/1-args.c) - a program that prints the number of arguments passed into it.
+[1-args.c](./1-args.c) - a program that prints the number of arguments passed into it.
 
-[2-args.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x0A-argc_argv/2-args.c) - a program that prints all arguments it receives.
+[2-args.c](./2-args.c) - a program that prints all arguments it receives.
 
-[3-mul.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x0A-argc_argv/3-mul.c) - a program that multiplies two numbers.
+[3-mul.c](./3-mul.c) - a program that multiplies two numbers.
 
-[4-add.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x0A-argc_argv/4-add.c) - a program that adds positive numbers.
+[4-add.c](./4-add.c) - a program that adds positive numbers.
 
-[100-change.c](https://github.com/Gbeminiyi2022/alx-low_level_programming/blob/main/0x0A-argc_argv/100-change.c) - a program that prints the minimum number of coins to make change for an amount of money.
+## Advanced
+[100-change.c](./100-change.c) - a program that prints the minimum number of coins to make change for an amount of money.
