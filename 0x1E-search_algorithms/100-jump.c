@@ -25,6 +25,9 @@ int jump_search(int *array, size_t size, int value)
 {
         size_t prev = 0;
         size_t step = 0;
+	
+	if (!array || !size)
+		return (-1);
 
         /* find the block that may contain the value */
         while (array[min(step, size - 1)] < value)
