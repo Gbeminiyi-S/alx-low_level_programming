@@ -23,43 +23,33 @@ size_t min(size_t a, size_t b)
  */
 int jump_search(int *array, size_t size, int value)
 {
-	size_t prev = 0;
-	size_t step = sqrt(size);
+        size_t prev = 0;
+        size_t step = 0;
 
-	if (array == NULL)
-		return (-1);
+        /* find the block that may contain the value */
+        while (array[min(step, size - 1)] < value)
+        {
+                printf("Value checked array[%ld] = [%d]\n", step, array[step]);
+                prev = step;
+                step += sqrt(size);
+                if (step > size - 1)
+                        break;
+        }
+        printf("Value found between indexes [%ld] and [%ld]\n", prev, step);
 
-	/* find the block that may contain the value */
-	while (array[min(step, size)] < value)
-	{
-		if (prev >= size)
-		{
-			printf("Value found between indexes [%ld] and [%ld]\n", prev, step);
-			printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-			return (-1);
-		}
-		if (array[min(step, size) - 1] >= value)
-			break;
+        /* linear search */
+        while ((prev <= min(step, size - 1)) && (array[prev] <= value))
+        {
+                printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
+                if (array[prev] == value)
+                        break;
+                prev++;
+        }
 
-		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-		prev = step;
-		step += sqrt(size);
-	}
-	printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-	printf("Value found between indexes [%ld] and [%ld]\n", prev, step);
-
-	/* linear search */
-	while (array[prev] < value)
-	{
-		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-		prev++;
-		if (prev > step)
-			return (-1);
-	}
-
-	printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
-	/* check if there was a match*/
-	if (array[prev] == value)
-		return (prev);
-	return (-1);
+        /* check if there was a match*/
+        if (array[prev] == value)
+        {
+                return (prev);
+        }
+        return (-1);
 }
