@@ -32,12 +32,27 @@ void print_array(int *array, size_t low, size_t high)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	size_t low = 0, mid, high = size - 1;
+	size_t low = 0, high = size - 1;
 
 	if (array == NULL)
 		return (-1);
 
 	print_array(array, low, high);
+	return (binary_helper(array, low, high, value));
+}
+/**
+ * binary_helper - helper function to binary_search
+ * @array: a pointer to the first element of the array to search in
+ * @low: start point
+ * @high: end point
+ * @value: the value to search for
+ *
+ * Return: the first index where value is located, else, -1
+ */
+int binary_helper(int *array, size_t low, size_t high, int value)
+{
+	size_t mid;
+
 	while (low != high)
 	{
 		mid = (low + high) / 2;
