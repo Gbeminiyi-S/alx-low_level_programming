@@ -75,6 +75,9 @@ int exponential_search(int *array, size_t size, int value)
 {
 	size_t i = 1, j;
 
+	if (array == NULL)
+		return (-1);
+
 	/* If x is present at first location itself */
 	if (array[0] == value)
 	{
