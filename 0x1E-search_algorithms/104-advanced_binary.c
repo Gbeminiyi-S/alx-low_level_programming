@@ -68,11 +68,11 @@ int binary_helper(int *array, size_t low, size_t high, int value)
 		if (array[mid] == value && array[mid - 1] != value)
 			return (mid);
 		else if (array[mid] == value && array[mid - 1] == value)
-			high = mid - 1;
+			high = mid;
 		else if (array[mid] < value)
 			low = mid + 1;
-		else
-			high = mid - 1;
+		else if (array[mid] > value)
+			high = mid;
 		print_array(array, low, high);
 		return (binary_helper(array, low, high, value));
 	}
