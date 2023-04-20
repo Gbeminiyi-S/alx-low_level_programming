@@ -54,7 +54,14 @@ int binary_helper(int *array, size_t low, size_t high, int value)
 {
 	size_t mid;
 
-	while (low != high)
+	if (low == high)
+	{
+		if (array[low] == value)
+			return (low);
+		else
+			return (-1);
+	}
+	else
 	{
 		mid = (low + high) / 2;
 
@@ -67,8 +74,6 @@ int binary_helper(int *array, size_t low, size_t high, int value)
 		else
 			high = mid - 1;
 		print_array(array, low, high);
+		return (binary_helper(array, low, high, value));
 	}
-	if (array[low] == value)
-		return (low);
-	return (-1);
 }
