@@ -39,7 +39,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			list = list->next;
 			j++;
 		}
-		printf("Value checked array[%ld] = [%d]\n", j, list->n);
+		printf("Value checked at index [%ld] = [%d]\n", j, list->n);
 		step = list;
 		index += sqrt(size);
 	}
@@ -48,7 +48,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	/* linear search */
 	while ((i <= min(i, size - 1)) && (prev->n <= value))
 	{
-		printf("Value checked array[%ld] = [%d]\n", i, prev->n);
+		printf("Value checked at index [%ld] = [%d]\n", i, prev->n);
 		if (prev->n == value)
 			return (prev);
 		prev = prev->next;
