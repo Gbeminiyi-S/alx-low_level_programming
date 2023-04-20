@@ -6,7 +6,7 @@
  * @b: second number
  *
  * Return: the minimum number
- * */
+ */
 size_t min(size_t a, size_t b)
 {
 	return ((a < b) ? a : b);
@@ -44,7 +44,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		index += sqrt(size);
 	}
 	printf("Value found between indexes [%ld] and [%ld]\n", i, j);
-	
+
 	/* linear search */
 	while ((i <= min(i, size - 1)) && (prev->n <= value))
 	{
