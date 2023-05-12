@@ -14,15 +14,9 @@ int main(int ac, char *av[])
 		exit(97);
 	}
 
-	if (!av[1])
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
 	from_file = open(av[1], O_RDONLY);
 	if (from_file == -1)
 	{
-
                 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
                 exit(98);
         }	
@@ -35,6 +29,11 @@ int main(int ac, char *av[])
 	}
 	while((buflen = read(from_file, buf, 1024)) > 0)
 	{
+		if (buflen == -1)
+		{
+         		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+                	exit(98);
+        	}
     		val = write(to_file, buf, buflen);
 		if (val == -1)
 		{
