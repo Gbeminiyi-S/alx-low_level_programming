@@ -35,14 +35,14 @@ int main(int ac, char *av[])
 	close_file = close(from_file);
 	if (close_file == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", from_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from_file);
 		exit(100);
 	}
 
 	close_file = close(to_file);
 	if (close_file == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", to_file);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to_file);
 		exit(100);
 	}
 	return (0);
