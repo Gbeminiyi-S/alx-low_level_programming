@@ -14,12 +14,17 @@ int main(int ac, char *av[])
 		exit(97);
 	}
 
-	from_file = open(av[1], O_RDONLY);
-	if (from_file == -1)
+	if (!av[1])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
+	from_file = open(av[1], O_RDONLY);
+	{
+
+                dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+                exit(98);
+        }	
 
 	to_file = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (to_file == -1)
@@ -30,6 +35,11 @@ int main(int ac, char *av[])
 	while((buflen = read(from_file, buf, 1024)) > 0)
 	{
     		write(to_file, buf, buflen);
+		if (to_file == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			close(from_file), exit(99);
+		}
 	}
 
 	close_file = close(from_file);
