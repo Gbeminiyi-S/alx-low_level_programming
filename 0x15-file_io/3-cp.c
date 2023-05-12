@@ -5,7 +5,7 @@
 
 int main(int ac, char *av[])
 {
-	int from_file, to_file, buflen, close_file;
+	int from_file, to_file, buflen, close_file, val;
 	char buf[1024];
 
 	if (ac != 3)
@@ -34,8 +34,8 @@ int main(int ac, char *av[])
 	}
 	while((buflen = read(from_file, buf, 1024)) > 0)
 	{
-    		write(to_file, buf, buflen);
-		if (to_file == -1)
+    		val = write(to_file, buf, buflen);
+		if (val == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			close(from_file), exit(99);
