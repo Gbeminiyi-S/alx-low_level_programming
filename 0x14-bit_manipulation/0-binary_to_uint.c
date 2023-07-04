@@ -11,24 +11,20 @@ unsigned int binary_to_uint(const char *b)
 	int len;
 	unsigned int sum = 0, i = 0;
 
+	/* check if b is not null */
 	if (!b)
-	{
 		return (0);
-	}
+
+	/* calculate the length of the string */
 	for (len = 0; b[len]; len++)
 		;
-	for (; len > 0; len--)
+	/* loop through the string and compute*/
+	for (len -= 1; len >= 0; i++, len--)
 	{
-		if (b[len - 1] == '0' || b[len - 1] == '1')
-		{
-			sum += ((b[len - 1] - '0') << i);
-		}
+		if (b[i] == '0' || b[i] == '1')
+			sum += ((b[i] - '0') << len);
 		else
-		{
 			return (0);
-		}
-		i++;
 	}
 	return (sum);
 }
-
