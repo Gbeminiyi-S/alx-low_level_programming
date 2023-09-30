@@ -11,6 +11,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
 
+.PHONY: clean oclean fclean re
+
 clean:
 	$(RM) *~ $(NAME)
 
